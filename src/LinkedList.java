@@ -45,6 +45,16 @@ public class LinkedList <T>{
         }
         temp.next = null;
     }
+    public boolean searchNode(T value){
+        Node<T> temp = head;
+        while(temp!=null){
+            if(temp.data == value){
+                return  true;
+            }
+            temp = temp.next;
+        }
+        return false;
+    }
     public void display(){
         Node<T> temp = head;
         while (temp!=null){
