@@ -10,4 +10,12 @@ public class LinkedList <T>{
             head = newNode;
         }
     }
+    public void append(T data){
+        Node<T> newNode = new Node<>(data);
+        Node<T> temp = head;
+        while (temp.next!=null){
+            temp = temp.next;
+        }
+        temp.next = newNode;
+    }
 }
