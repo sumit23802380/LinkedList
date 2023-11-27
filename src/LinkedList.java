@@ -55,6 +55,18 @@ public class LinkedList <T>{
         }
         return false;
     }
+    public void insertAfterParticularNode(T searchValue , T value){
+        Node<T> temp = head;
+        while (temp!=null){
+            if(temp.data == searchValue){
+                Node<T> nextNode = temp.next;
+                temp.next = new Node<>(value);
+                temp.next.next = nextNode;
+                break;
+            }
+            temp = temp.next;
+        }
+    }
     public void display(){
         Node<T> temp = head;
         while (temp!=null){

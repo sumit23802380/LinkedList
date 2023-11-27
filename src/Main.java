@@ -4,6 +4,7 @@ public class Main {
         intLL.append(56);
         intLL.append(30);
         intLL.append(70);
-        System.out.println(intLL.searchNode(30));
+        intLL.insertAfterParticularNode(30, 40);
+        intLL.display();
     }
 }
