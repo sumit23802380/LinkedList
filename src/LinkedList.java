@@ -28,4 +28,18 @@ public class LinkedList <T>{
         newNode.next = b;
         head = a;
     }
+    public void pop(){
+        if(head==null){
+            return;
+        }
+        head = head.next;
+    }
+    public void display(){
+        Node<T> temp = head;
+        while (temp!=null){
+            System.out.print(temp.data + " ->");
+            temp=temp.next;
+        }
+        System.out.println(" null");
+    }
 }
