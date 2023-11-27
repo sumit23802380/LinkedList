@@ -22,4 +22,10 @@ public class LinkedList <T>{
         }
         temp.next = newNode;
     }
+    public void insertBetweenTwoNodes(T data , Node<T> a , Node<T> b){
+        Node<T> newNode = new Node<>(data);
+        a.next = newNode;
+        newNode.next = b;
+        head = a;
+    }
 }
