@@ -4,8 +4,9 @@ public class Main {
         intLL.append(56);
         intLL.append(30);
         intLL.append(70);
-        intLL.pop();
-
+        intLL.popLast();
+        intLL.popLast();
+        intLL.popLast();
         intLL.display();
     }
 }
