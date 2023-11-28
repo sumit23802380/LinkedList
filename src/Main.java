@@ -4,7 +4,7 @@ public class Main {
         intLL.append(56);
         intLL.append(30);
         intLL.append(70);
-        intLL.insertAfterParticularNode(30, 40);
+        intLL.deleteParticularNode(30);
         intLL.display();
     }
 }

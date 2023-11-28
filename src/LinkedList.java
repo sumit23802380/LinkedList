@@ -105,8 +105,24 @@ public class LinkedList <T>{
             temp = temp.next;
         }
     }
+    /*
+     *@desc : deletes the particular searchvalue if it is present in linked list
+     *@params : Generic searchValue
+     *@return :
+     */
     public void deleteParticularNode(T searchValue){
-        
+        if(head.data == searchValue){
+            head = head.next;
+            return;
+        }
+        Node<T> temp = head;
+        while(temp.next!=null){
+            if(temp.next.data == searchValue){
+                temp.next = temp.next.next;
+                return;
+            }
+            temp = temp.next;
+        }
     }
     /*
      *@desc : prints the linked list
