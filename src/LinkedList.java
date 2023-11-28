@@ -125,6 +125,20 @@ public class LinkedList <T>{
         }
     }
     /*
+     *@desc : size of the linked list
+     *@params :
+     *@return : integer size
+     */
+    public int size(){
+        Node<T> temp = head;
+        int nodeCount = 0;
+        while(temp!=null){
+            nodeCount++;
+            temp = temp.next;
+        }
+        return nodeCount;
+    }
+    /*
      *@desc : prints the linked list
      *@params :
      *@return :
