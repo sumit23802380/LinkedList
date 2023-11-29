@@ -1,7 +1,7 @@
 /*
     *@desc : Data Structure LinkedList Generic Class
  */
-public class LinkedList <T>{
+public class LinkedList <T extends Comparable<T>>{
     public Node<T> head;
     /*
      *@desc : add the new node to beginning of linked list
@@ -137,6 +137,25 @@ public class LinkedList <T>{
             temp = temp.next;
         }
         return nodeCount;
+    }
+    /*
+     *@desc : adds the new node in the ascending order
+     *@params : generic data that to be added in linked list
+     *@return :
+     */
+    public void addInAscendingOrder(T data){
+        Node<T> newNode = new Node<>(data);
+        Node<T> temp = head;
+        if(head == null || data.compareTo(head.data)<0){
+            newNode.next = head;
+            head = newNode;
+            return;
+        }
+        while(temp.next!=null && data.compareTo(temp.next.data)>0){
+            temp = temp.next;
+        }
+        newNode.next = temp.next;
+        temp.next = newNode;
     }
     /*
      *@desc : prints the linked list
